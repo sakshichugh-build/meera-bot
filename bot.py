@@ -126,7 +126,8 @@ def process_note(chat_id, message_id, text, is_voice):
 
     # 6. Send for review.
     if hook:
-        src = f"{hook['source']} — {hook['headline']}"
+        src = (f"{hook['source']} — {hook['headline']}\n"
+               f"{hook['url']}")
     else:
         src = "none (no relevant recent item found)"
     header = (
